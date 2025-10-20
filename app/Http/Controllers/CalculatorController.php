@@ -116,4 +116,12 @@ class CalculatorController extends Controller
       $result .= '<br><span class="lead"><b>'.$lhs.' = '.$rhs.'</b></span>';
       return response()->json(['response' => $result]);
     }
-}
+    public function multiplytest(){
+      return view('multiplytest');
+
+    }
+    public function calculate_multiplytest(){
+      
+    }
+
+  }
