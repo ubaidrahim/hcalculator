@@ -44,3 +44,8 @@ Route::get('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorCont
 Route::post('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorController::class, 'calculate_demoivres']);
 Route::get('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'index']);
 Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'calculate']);
+
+
+// /kanwal/ 
+Route::get('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
+Route::post('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
