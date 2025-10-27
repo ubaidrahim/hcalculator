@@ -38,8 +38,8 @@ Route::get('/bayes-theorem', [App\Http\Controllers\CalculatorController::class, 
 Route::post('/bayes-theorem', [App\Http\Controllers\CalculatorController::class, 'calculate_bayes']);
 Route::get('/fermats-little-theorem-calculator', [App\Http\Controllers\Calculators\FermatsController::class, 'fermats']);
 Route::post('/fermats-little-theorem-calculator', [App\Http\Controllers\Calculators\FermatsController::class, 'calculate_fermats']);
-Route::get('/linear-dependance', [App\Http\Controllers\CalculatorController::class, 'lineardependance']);
-Route::post('/linear-dependance', [App\Http\Controllers\CalculatorController::class, 'calculate_lineardependance']);
+Route::get('/linear-dependance', [App\Http\Controllers\Calculators\LinearIndependanceController::class, 'index']);
+Route::post('/linear-dependance', [App\Http\Controllers\Calculators\LinearIndependanceController::class, 'calculate']);
 Route::get('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorController::class, 'demoivres']);
 Route::post('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorController::class, 'calculate_demoivres']);
 Route::get('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'index']);
