@@ -44,5 +44,8 @@ Route::get('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorCont
 Route::post('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorController::class, 'calculate_demoivres']);
 Route::get('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'index']);
 Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'calculate']);
-Route::get('/multiplytest', [App\Http\Controllers\CalculatorController::class, 'multiplytest']);
-Route::post('/multiplytest', [App\Http\Controllers\CalculatorController::class, 'calculate_multiplytest']);
+Route::get('/test-one', [App\Http\Controllers\HasnainController::class, 'testonefunc']);
+Route::post('/test-one', [App\Http\Controllers\HasnainController::class, 'calculate_multiply']);
+
+Route::get('/even-or-odd-fun', [App\Http\Controllers\HasnainController::class, 'evenoddfun']);
+Route::post('/even-or-odd-fun', [\App\Http\Controllers\HasnainController::class, 'calculate_evenodd']);
