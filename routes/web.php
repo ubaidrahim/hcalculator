@@ -44,3 +44,5 @@ Route::get('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorCont
 Route::post('/demoivres-theorem-calculator', [App\Http\Controllers\CalculatorController::class, 'calculate_demoivres']);
 Route::get('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'index']);
 Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\WeightedAvgController::class, 'calculate']);
+Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
+Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
