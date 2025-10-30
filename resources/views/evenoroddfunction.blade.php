@@ -54,12 +54,25 @@
   <div class="input-group input-group-static mb-4">
     <label>Function F(x) = or Y = :</label>
     <input class="form-control"
+          id="expression"
            placeholder="f(x)=2x^2-3"
            type="text"
            name="expression"
            value="{{ old('expression', $expression) }}"
            autocomplete="off"
            required>
+  </div>
+  <div class="d-flex justify-content-center flex-wrap">
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="sin(x)">sin(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="cos(x)">cos(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="tan(x)">tan(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="abs(x)">abs(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="exp(x,2)">exp(x,2)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="log(x,2)">log(x,2)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="sqrt(x)">sqrt(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="pow(x,2)">pow(x,2)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="floor(x)">floor(x)</button>
+    <button type="button" class="btn btn-outline-secondary functionbtn" data-function="ceil(x)">ceil(x)</button>
   </div>
 
   <button type="submit" id="check" class="btn bg-gradient-primary w-100">
@@ -188,6 +201,11 @@
     </div>
   </div>
   <script type="text/javascript">
+$(document).on('click','.functionbtn',function(){
+  let fun = $(this).attr('data-function');
+  let exp = $('#expression').val();
+  $('#expression').val(exp+fun);
+});
 $('#calculatorForm').on('submit', function(e) {
     e.preventDefault();
 
