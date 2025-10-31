@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="row justify-content-between py-2">
-              <div class="col-lg-4 ms-lg-auto col-md-4 col-sm-3">
+              <div class="col-lg-4 me-lg-auto col-md-4 col-sm-3">
                 <label for="vectors"># of Vectors</label>
                 <div class="input-group input-group-static flex-nowrap mb-4">
                   <input class="form-control" placeholder="a" type="number" id="vectors" disabled name="vectors" value="3">
@@ -72,70 +72,69 @@
             </div>
             <div class="row justify-content-center py-2">
               <div class="col-lg-8 bg-light py-3 rounded">
-                <div class="mb-4 border-bottom border-warning text-center">
-                  <p class="lead mb-0"><b>u</b> = ( a<sub>1</sub> a<sub>2</sub> )</p>
+                <div class="mb-4 border-bottom border-warning text-center coordshow" id="ushowdiv">
+                  <p class="lead mb-0"><b>u</b> = <span id="ushow">( a<sub>0</sub> a<sub>1</sub> )</span></p>
                 </div>
-                <div class="mb-4 border-bottom border-warning text-center">
-                <p class="lead mb-0"><b>v</b> = ( b<sub>1</sub> b<sub>2</sub> )</p>
+                <div class="mb-4 border-bottom border-warning text-center coordshow" id="vshowdiv">
+                <p class="lead mb-0"><b>v</b> = <span id="vshow">( b<sub>0</sub> b<sub>1</sub> )</span></p>
                 </div>
-                <div class="mb-4 border-bottom border-warning text-center">
-                <p class="lead mb-0"><b>w</b> = ( c<sub>1</sub> c<sub>2</sub> )</p>
+                <div class="mb-4 border-bottom border-warning text-center coordshow" id="wshowdiv">
+                <p class="lead mb-0"><b>w</b> = <span id="wshow">( c<sub>0</sub> c<sub>1</sub> )</span></p>
+              </div>
+                <div class="mb-4 border-bottom border-warning text-center d-none coordshow" id="tshowdiv">
+                <p class="lead mb-0"><b>t</b> = <span id="tshow">( d<sub>0</sub> d<sub>1</sub> )</span></p>
               </div>
               </div>
             </div>
-
-            <div class="row align-items-center text-center justify-content-center py-2 block-row" id="u-row">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="row align-items-center text-center justify-content-center py-2 block-row border shadow rounded mb-2 w-100 w-md-50" id="u-row">
               <div class="col-lg-3">
-                <label>u</label>
+                <h3>u</h3>
               </div>
               <div class="col-lg-5" id="u">
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="b₂" type="number" name="u[]">
+                  <input class="form-control text-center" placeholder="a0" type="number" name="u[]" required>
                 </div>
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="u[]">
+                  <input class="form-control text-center" placeholder="a1" type="number" name="u[]" required>
                 </div>
               </div>
             </div>
-            <div class="row align-items-center text-center justify-content-center py-2 block-row" id="v-row">
+            <div class="row align-items-center text-center justify-content-center py-2 block-row border shadow rounded mb-2 w-100 w-md-50" id="v-row">
               <div class="col-lg-3">
-                <label>v</label>
+                <h3>v</h3>
               </div>
               <div class="col-lg-5" id="v">
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="v[]">
+                  <input class="form-control text-center" placeholder="b0" type="number" name="v[]" required>
                 </div>
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="v[]">
+                  <input class="form-control text-center" placeholder="b1" type="number" name="v[]" required>
                 </div>
               </div>
             </div>
-            <div class="row align-items-center text-center justify-content-center py-2 block-row" id="w-row">
+            <div class="row align-items-center text-center justify-content-center py-2 block-row border shadow rounded mb-2 w-100 w-md-50" id="w-row">
               <div class="col-lg-3">
-                <label>w</label>
+                <h3>w</h3>
               </div>
               <div class="col-lg-5" id="w">
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="w[]">
+                  <input class="form-control text-center" placeholder="c0" type="number" name="w[]" required>
                 </div>
                 <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="w[]">
+                  <input class="form-control text-center" placeholder="c1" type="number" name="w[]" required>
                 </div>
               </div>
             </div>
-            <div class="row align-items-center text-center justify-content-center py-2 d-none block-row" id="t-row">
+            <div class="row align-items-center text-center justify-content-center py-2 d-none block-row border shadow rounded mb-2 w-100 w-md-50" id="t-row">
               <div class="col-lg-3">
-                <label>t</label>
+                <h3>t</h3>
               </div>
               <div class="col-lg-5" id="t">
-                <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="t[]">
-                </div>
-                <div class="input-group input-group-static mb-4">
-                  <input class="form-control" placeholder="a" type="number" name="t[]">
-                </div>
+                
               </div>
             </div>
+          </div>
             <div class="row justify-content-center py-2">
               <div class="col-lg-8">
                 <button type="submit" id="calculate" class="btn bg-gradient-primary w-100">Calculate</button>
@@ -149,46 +148,6 @@
             </div>
           </div>
         </div>
-
-        {{-- <div class="px-3 py-2">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <a href="{{ url('/whp-to-hp-calculator') }}" class="btn bg-gradient-secondary shadow-primary">WHP to HP Calculator</a>
-              </div>
-            </div>
-          </div>
-          <div class="container border">
-
-            <div class="row">
-              <div class="col-lg-12">
-                <h2>Wheel Horsepower Formula</h2>
-                <p class="lead">A car's horsepower is calculated using the following formula.</p>
-                <i class="lead">WHP = EHP / DTLF</i>
-                <ul>
-                  <li>Where <b>WHP</b> represents a wheel horsepower</li>
-                  <li><b>EHP</b> stands for engine horsepower</li>
-                  <li><b>LF</b> is the drive train loss factor
-                    <ul>
-                      <li>front wheel drive = 1.1</li>
-                      <li>rear wheel drive = 1.15</li>
-                      <li>all wheel drive = 1.2</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-12">
-                <h2>Wheel horsepower</h2>
-                <p>The horsepower that a car's engine delivers to the wheels after accounting for drivetrain loss is known as wheel horsepower.</p>
-              </div>
-              <div class="col-lg-12">
-                <h2>How is wheel horsepower calculated?</h2>
-                <p><strong>The horsepower that a car's engine delivers to the wheels after accounting for drivetrain loss is known as wheel horsepower.</strong></p>
-                <i class="lead">WHP = EHP / DTLF</i>
-              </div>
-            </div>
-          </div>
-        </div> --}}
       </div>
     </div>
   </div>
@@ -215,84 +174,99 @@
   });
   function layvectors(vector, coord){
     $('.block-row').removeClass('d-none');
+    $('.coordshow').removeClass('d-none');
     var uhtml = '';
     var vhtml = '';
     var whtml = '';
     var thtml = '';
+    var ushow = '( ';
+    var vshow = '( ';
+    var wshow = '( ';
+    var tshow = '( ';
+    vector = parseInt(vector);
     switch (vector) {
       case 2:
       $('#w-row').addClass('d-none');
       $('#t-row').addClass('d-none');
+      $('#wshowdiv').addClass('d-none');
+      $('#tshowdiv').addClass('d-none');
       for (var i = 0; i < coord; i++) {
         uhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="a'+i+'" type="number" name="u[]"> \
+          <input class="form- text-center" required placeholder="a'+i+'" type="number" name="u[]"> \
         </div>';
         vhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="b'+i+'" type="number" name="v[]"> \
+          <input class="form-control text-center" required placeholder="b'+i+'" type="number" name="v[]"> \
         </div>';
+        ushow += 'a<sub>'+i+'</sub> ';
+        vshow += 'b<sub>'+i+'</sub> ';
       }
         break;
       case 3:
       $('#t-row').addClass('d-none');
+      $('#tshowdiv').addClass('d-none');
       for (var i = 0; i < coord; i++) {
         uhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="a'+i+'" type="number" name="u[]"> \
+          <input class="form-control text-center" required placeholder="a'+i+'" type="number" name="u[]"> \
         </div>';
         vhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="b'+i+'" type="number" name="v[]"> \
+          <input class="form-control text-center" required placeholder="b'+i+'" type="number" name="v[]"> \
         </div>';
         whtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="c'+i+'" type="number" name="w[]"> \
+          <input class="form-control text-center" required placeholder="c'+i+'" type="number" name="w[]"> \
         </div>';
+        ushow += 'a<sub>'+i+'</sub> ';
+        vshow += 'b<sub>'+i+'</sub> ';
+        wshow += 'c<sub>'+i+'</sub> ';
       }
       break;
       case 4:
       for (var i = 0; i < coord; i++) {
         uhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="a'+i+'" type="number" name="u[]"> \
+          <input class="form-control text-center" required placeholder="a'+i+'" type="number" name="u[]"> \
         </div>';
         vhtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="b'+i+'" type="number" name="v[]"> \
+          <input class="form-control text-center" required placeholder="b'+i+'" type="number" name="v[]"> \
         </div>';
         whtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="c'+i+'" type="number" name="w[]"> \
+          <input class="form-control text-center" required placeholder="c'+i+'" type="number" name="w[]"> \
         </div>';
         thtml += '<div class="input-group input-group-static mb-4"> \
-          <input class="form-control" placeholder="d'+i+'" type="number" name="t[]"> \
+          <input class="form-control text-center" required placeholder="d'+i+'" type="number" name="t[]"> \
         </div>';
+        ushow += 'a<sub>'+i+'</sub> ';
+        vshow += 'b<sub>'+i+'</sub> ';        
+        wshow += 'c<sub>'+i+'</sub> ';        
+        tshow += 'd<sub>'+i+'</sub> ';
       }
       break;
 
     }
-    $('u').html(uhtml);
-    $('v').html(vhtml);
-    $('w').html(whtml);
-    $('t').html(thtml);
+    $('#u').html(uhtml);
+    $('#v').html(vhtml);
+    $('#w').html(whtml);
+    $('#t').html(thtml);
+    $('#ushow').html(ushow+')');
+    $('#vshow').html(vshow+')');
+    $('#wshow').html(wshow+')');
+    $('#tshow').html(tshow+')');
 
   }
   $('#calculatorForm').on('submit',function(e){
     e.preventDefault();
-    // var data = $(this).serialize();
-    // var method = $(this).attr('method');
-    // var url = $(this).attr('action');
-    // $.ajax({
-    //   url : url,
-    //   method: method,
-    //   data : data,
-    //   success: function(data){
-    //     var html = '<div class="alert alert-dark text-white font-weight-bold" >'+data.response+'</div>';
-    //     $('#response').html(html);
-    //   },
-    //   error: (error) => {console.log(error)}
-    // });
+    var data = $(this).serialize();
+    var method = $(this).attr('method');
+    var url = $(this).attr('action');
+    $.ajax({
+      url : url,
+      method: method,
+      data : data,
+      success: function(data){
+        var html = '<div class="alert alert-dark text-white font-weight-bold" >'+data.response+'</div>';
+        $('#response').html(html);
+      },
+      error: (error) => {console.log(error)}
+    });
   });
-  // $('#calculate').on('click',function(){
-  //   var whp = $('input[name="i1"]').val();
-  //   var dl = $('input[name="i2"]').val();
-  //   var hp = whp/(1–dl);
-  //   var html = '<div class="alert alert-dark text-white font-weight-bold" >Engine Horse Power: '+hp+'</div>';
-  //   $('#response').html(html);
-  // });
 
   </script>
 @endsection
