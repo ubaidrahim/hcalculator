@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <meta name="description" content="@yield('meta-description')">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/app-icon-76X76.png')}}">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="google-site-verification" content="B7l7FjAV25BtQLlp3mku0D3sZ9MnR2DLMIgnLeuPU-Q" />
-  <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+  <link rel="icon" type="image/png" href="{{asset('assets/img/favicon-32x32.png')}}">
   <title>
     @yield('title') - H Calculator
   </title>
@@ -41,9 +41,9 @@
 <body class="forms-sections">
   <!-- Navbar Light -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{{url('/')}}" data-placement="bottom">
-        <img src="{{ asset('assets/img/logo.png') }}" width="300" height="48" class="d-inline-block align-top" alt="">
+    <div class="container-fluid flex-column">
+      <a class="navbar-brand m-0" href="{{url('/')}}" data-placement="bottom">
+        <img src="{{ asset('assets/img/newlogo1.png') }}" width="380" class="d-inline-block align-top" alt="">
         {{-- <strong>H</strong> Calculator --}}
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +53,8 @@
           <span class="navbar-toggler-bar bar3"></span>
         </span>
       </button>
-      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-auto ps-lg-5" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover ms-auto align-items-center">
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 mt-3 ps-lg-5" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover mx-auto align-items-center">
             <li class="nav-item mx-2"><a class="ps-2 text-nowrap" href="{{ url('/') }}">Home</a></li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a class="ps-2 d-flex justify-content-center cursor-pointer align-items-center text-nowrap" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
