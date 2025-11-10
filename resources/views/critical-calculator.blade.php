@@ -1,8 +1,6 @@
 @extends('layouts.layout')
 
-@section('title','Critical Calculator | Critical Speed Calculator')
-@section('meta-description','Calculate critical speed easily using our free online Critical Calculator. Enter your shaft data, choose units, and get results instantly.')
-
+@section('title','Critical Speed Calculator')
 @section('headsection')
 <link rel="canonical" href="https://hcalculator.com/critical-calculator" />
 @endsection
@@ -10,7 +8,6 @@
 @section('content')
 <div class="container mt-5">
   <div class="row">
-    <div class="col-lg-12 mx-auto">
 
       {{-- Breadcrumb --}}
       <div class="mb-4">
@@ -74,7 +71,7 @@
             </form>
 
             {{-- Result Box --}}
-            <div id="resultBox" class="alert alert-success text-center mt-4 d-none">
+            <div id="resultBox" class="alert text-center mt-4 d-none" style="background:#eefbf3; border-color:#21c285;">
               <strong>Critical Speed (Nc):</strong> <span id="rpmResult"></span>
             </div>
 
@@ -83,17 +80,20 @@
       </div>
 
     </div>
-  </div>
 
 <section class="critical-speed-info container mt-4">
   <h2>Critical Speed Calculator Overview</h2>
   <p>
-    This calculator estimates the first critical (whirling) speed of a rotating shaft — the speed at which the shaft begins to vibrate due to resonance. It helps engineers and designers ensure that operating speeds remain well below the natural frequency of the shaft to prevent vibration and potential failure.
+    This calculator estimates the first critical (whirling) speed of a rotating shaft — 
+    the speed at which the shaft begins to vibrate due to resonance.
+     It helps engineers and designers ensure that operating speeds remain well below the natural frequency of the shaft to prevent 
+     vibration and potential failure.
   </p>
 
   <h3>How It Works</h3>
   <p>
-    The critical speed <strong>N<sub>c</sub></strong> is determined using the relationship between the shaft’s stiffness, mass, and boundary conditions:
+    The critical speed <strong>N<sub>c</sub></strong> is determined using the relationship between the shaft’s stiffness, 
+    mass, and boundary conditions:
   </p>
 <p class="text-center my-3">
     <img src="{{ asset('assets/img/formula.PNG') }}" 
@@ -112,7 +112,7 @@
     <li><strong>β<sub>1</sub></strong> = End fixity constant, based on support type</li>
   </ul>
 
-  <h3>🧩 End Fixity Options</h3>
+  <h3>End Fixity Options</h3>
   <p>
     The calculator adjusts the result using a fixity factor (F) to account for different bearing and support conditions:
   </p>
