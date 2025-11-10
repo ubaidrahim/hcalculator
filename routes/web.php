@@ -47,8 +47,8 @@ Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\We
 
 
 // /kanwal/ 
-Route::get('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
-Route::post('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
+Route::get('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
+Route::post('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
 
 
 use App\Http\Controllers\Calculators\GradeCurveController;

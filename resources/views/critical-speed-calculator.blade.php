@@ -2,7 +2,7 @@
 
 @section('title','Critical Speed Calculator')
 @section('headsection')
-<link rel="canonical" href="https://hcalculator.com/critical-calculator" />
+<link rel="canonical" href="https://hcalculator.com/critical-speed-calculator" />
 @endsection
 
 @section('content')
@@ -14,14 +14,14 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Critical Calculator</li>
+            <li class="breadcrumb-item active" aria-current="page">Critical Speed Calculator</li>
           </ol>
         </nav>
       </div>
 
         {{-- Main Calculator Card --}}
           <div class="card shadow-lg p-4">
-            <h3 class="text-center mb-4">Calculate Critical Speed (Nc)</h3>
+            <h3 class="text-center mb-4">Critical Speed Calculator (Nc)</h3>
 
             <form id="criticalForm" method="POST">
               @csrf
