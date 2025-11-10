@@ -19,7 +19,7 @@
       </div>
 
 <div class="card shadow-lg p-4">
-    <h3 class="text-center mb-4">Grade Curve Calculator</h3>
+    <h1 class="text-center mb-4">Grade Curve Calculator</h1>
 
     <form id="curveForm">
     @csrf

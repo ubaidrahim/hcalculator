@@ -21,7 +21,7 @@
 
         {{-- Main Calculator Card --}}
           <div class="card shadow-lg p-4">
-            <h3 class="text-center mb-4">Critical Speed Calculator (Nc)</h3>
+            <h1 class="text-center mb-4">Critical Speed Calculator (Nc)</h1>
 
             <form id="criticalForm" method="POST">
               @csrf
