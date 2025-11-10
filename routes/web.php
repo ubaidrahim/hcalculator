@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Calculators\GradeCurveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,20 +48,15 @@ Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\We
 
 
 // /kanwal/ 
-Route::get('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
-Route::post('/critical-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
-
-// /ubaid/
-Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
-Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
 Route::get('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
 Route::post('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
-
-
-use App\Http\Controllers\Calculators\GradeCurveController;
 
 Route::get('/grade-curve-calculator', [GradeCurveController::class, 'index'])
     ->name('grade-curve-calculator');
 
 Route::post('/grade-curve-calculator', [GradeCurveController::class, 'calculate'])
     ->name('grade-curve-calculator');
+
+// /ubaid/
+Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
+Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
