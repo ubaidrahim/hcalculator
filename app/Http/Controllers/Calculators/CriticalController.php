@@ -9,7 +9,7 @@ class CriticalController extends Controller
 {
     public function index()
     {
-        return view('critical-calculator');
+        return view('critical-speed-calculator');
     }
 
     public function calculate(Request $request)
