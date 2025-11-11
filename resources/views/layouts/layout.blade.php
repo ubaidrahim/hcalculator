@@ -75,6 +75,11 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Wheel Horse Power Calculator</h6>
                     </a>
                   </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('critical-speed-calculator') }}">
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Critical Speed Calculator</h6>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="row d-lg-none">
@@ -85,6 +90,10 @@
                   </a>
                   <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('wheel-horse-power-calculator') }}">
                     <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Wheel Horse Power Calculator</h6>
+
+                  </a>
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('critical-speed-calculator') }}">
+                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Critical Speed Calculator</h6>
 
                   </a>
                   
@@ -145,7 +154,18 @@
 
                     </a>
                   </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/linear-independance-calculator') }}">
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Linear Independance Calculator</h6>
 
+                    </a>
+                  </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/matrix-power-calculator') }}">
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Matrix Power Theorem</h6>
+
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="row d-lg-none">
@@ -162,10 +182,44 @@
                     <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Weighted Average Calculator</h6>
 
                   </a>
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/linear-independance-calculator') }}">
+                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Linear Independance Calculator</h6>
+
+                  </a>
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/matrix-power-calculator') }}">
+                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Matrix Power Calculator</h6>
+
+                  </a>
 
                 </div>
               </div>
             </ul>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="ps-2 d-flex justify-content-center cursor-pointer align-items-center text-nowrap" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+
+              Miscellaneous Calculators
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-md border" aria-labelledby="dropdownMenuDocs">
+              <div class="d-none d-lg-block">
+                <ul class="list-group">
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/grade-curve-calculator') }}">
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grade Curve Calculator</h6>
+
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+            <div class="row d-lg-none">
+                <div class="col-md-12 g-0">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/grade-curve-calculator') }}">
+                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Grade Curve Calculator</h6>
+
+                  </a>
+                </div>
+            </div>
           </li>
           <li class="nav-item mx-2"><a class="ps-2 text-nowrap" href="{{route('contact')}}">Contact Us</a></li>
           {{-- <li class="nav-item ms-lg-auto">
