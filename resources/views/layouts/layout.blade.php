@@ -166,6 +166,12 @@
 
                     </a>
                   </li>
+                  <li class="nav-item list-group-item border-0 p-0">
+                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/even-odd-function') }}">
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Even or Odd Function</h6>
+
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="row d-lg-none">
@@ -188,6 +194,10 @@
                   </a>
                   <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/matrix-power-calculator') }}">
                     <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Matrix Power Calculator</h6>
+
+                  </a>
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{ url('/even-odd-function') }}">
+                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Even or Odd Function</h6>
 
                   </a>
 
