@@ -49,7 +49,7 @@
             </div>
           </div> --}}
           <div class="container">
-          <form id="calculatorForm" action="{{ url('/even-or-odd-fun') }}" method="post">
+          <form id="calculatorForm" action="{{ url('/even-odd-function') }}" method="post">
   @csrf
   <div class="input-group input-group-static mb-4">
     <label>Function F(x) = or Y = :</label>
