@@ -6,25 +6,9 @@ use Illuminate\Http\Request;
 /* use App\Rules\Prime;
 use App\Rules\Integer; */
 
-class HasnainController extends Controller
+class EvenOddCalculatorController extends Controller
 {
-       public function testonefunc(){
-      return view('test1');
-    }
-    public function calculate_multiply(Request $request){
-      $validateData = $request->validate([
-        'i1' => ['required'],
-        'i2' => ['required']
-      ]);
-      $num1 = $request->input('i1');
-      $num2 = $request->input('i2');
-      $result = $num1 * $num2;
-      return response()->json(['response' => 'Result: '.$result]);
-    }
-
-
-
-    public function evenoddfun(){
+    public function index(){
       //return view('evenoroddfunction');
       return view('evenoroddfunction', [
             'result' => null,
@@ -32,34 +16,34 @@ class HasnainController extends Controller
             'expression' => old('expression', 'pow(x, 2) + 3'), // default example
         ]);
     }
-    public function calculate_evenodd(Request $request)
-{
-    $request->validate([
-        'expression' => ['required', 'string', 'max:500'],
-    ]);
+    public function calculate(Request $request) 
+    {
+        $request->validate([
+            'expression' => ['required', 'string', 'max:500'],
+        ]);
 
-    $expr = trim($request->input('expression'));
+        $expr = trim($request->input('expression'));
 
-    // Run the even/odd check
-    [$result, $error] = $this->checkFunctionParity($expr);
+        // Run the even/odd check
+        [$result, $error] = $this->checkFunctionParity($expr);
 
-    // Build message for the frontend
-    if ($error) {
-        $message = "Error: " . $error;
-    } elseif ($result) {
-        $message = "Result: " . $result;
-    } else {
-        $message = "Could not determine parity.";
+        // Build message for the frontend
+        if ($error) {
+            $message = "Error: " . $error;
+        } elseif ($result) {
+            $message = "Result: " . $result;
+        } else {
+            $message = "Could not determine parity.";
+        }
+
+        // ✅ Return JSON response
+        return response()->json([
+            'response'    => $message,
+            'result'      => $result,
+            'error'       => $error,
+            'expression'  => $expr,
+        ]);
     }
-
-    // ✅ Return JSON response
-    return response()->json([
-        'response'    => $message,
-        'result'      => $result,
-        'error'       => $error,
-        'expression'  => $expr,
-    ]);
-}
     private function checkFunctionParity(string $expression): array
     {
         // Allowed functions (whitelist)
