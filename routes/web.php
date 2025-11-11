@@ -62,5 +62,5 @@ Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixP
 Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
 
 // arslan
-Route::get('/even-or-odd-function', [App\Http\Controllers\EvenOddCalculatorController::class, 'index']);
-Route::post('/even-or-odd-function', [\App\Http\Controllers\EvenOddCalculatorController::class, 'calculate']);
+Route::get('/even-odd-function', [App\Http\Controllers\EvenOddCalculatorController::class, 'index']);
+Route::post('/even-odd-function', [\App\Http\Controllers\EvenOddCalculatorController::class, 'calculate']);
