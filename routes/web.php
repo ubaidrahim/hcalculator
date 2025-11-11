@@ -60,3 +60,25 @@ Route::post('/grade-curve-calculator', [GradeCurveController::class, 'calculate'
 // /ubaid/
 Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
 Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
+Route::get('/test-one', [App\Http\Controllers\HasnainController::class, 'testonefunc']);
+Route::post('/test-one', [App\Http\Controllers\HasnainController::class, 'calculate_multiply']);
+
+Route::get('/even-or-odd-fun', [App\Http\Controllers\HasnainController::class, 'evenoddfun']);
+Route::post('/even-or-odd-fun', [\App\Http\Controllers\HasnainController::class, 'calculate_evenodd']);
+
+
+// /kanwal/ 
+Route::get('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
+Route::post('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
+
+Route::get('/grade-curve-calculator', [GradeCurveController::class, 'index'])
+    ->name('grade-curve-calculator');
+
+Route::post('/grade-curve-calculator', [GradeCurveController::class, 'calculate'])
+    ->name('grade-curve-calculator');
+
+// /ubaid/
+Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
+Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
+Route::get('/even-or-odd-fun', [App\Http\Controllers\HasnainController::class, 'evenoddfun']);
+Route::post('/even-or-odd-fun', [\App\Http\Controllers\HasnainController::class, 'calculate_evenodd']);
