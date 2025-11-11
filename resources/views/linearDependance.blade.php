@@ -148,6 +148,60 @@
             </div>
           </div>
         </div>
+        <div class="px-3 py-3">
+          <div class="container border">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Linear Independence Calculator – Formula and Process</h2>
+                <p class="lead">The <b>Linear Independence Calculator</b> determines whether a given set of vectors are <i>linearly independent or dependent</i>.</p>
+                <h3>Formula</h3>
+                <p>Vectors 𝑣<sub>1</sub>,𝑣<sub>2</sub>,…,𝑣<sub>𝑛</sub> are said to be <b>linearly independent</b> if:</p>
+                <p class="text-center my-3">
+                  <img src="{{ asset('assets/img/linear_independance_formula1.png') }}" 
+                        alt="Linear Independance Formula" 
+                        class="img-fluid" 
+                        style="max-width: 400px;">
+                </p>
+                <p>has only the <b>trivial solution</b>:</p>
+                <p class="text-center my-3">
+                  <img src="{{ asset('assets/img/linear_independance_formula2.png') }}" 
+                        alt="Linear Independance Formula" 
+                        class="img-fluid" 
+                        style="max-width: 400px;">
+                </p>
+                <h3>Process</h3>
+                <ol>
+                  <li>
+                    <h6>Form a Matrix</h6>
+                    <p>Place the given vectors as columns in a matrix 𝐴=[𝑣<sub>1</sub> 𝑣<sub>2</sub> … 𝑣<sub>𝑛</sub>].</p>
+                  </li>
+                  <li>
+                    <h6>Row Reduction (RREF)</h6>
+                    <p>Apply <b>Gaussian elimination</b> to convert <b>𝐴</b> into its <b>Reduced Row Echelon Form (RREF)</b>.</p>
+                    <ul>
+                      <li>Each pivot (leading 1) represents a linearly independent column.</li>
+                      <li>Zero rows indicate dependent relationships.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h6>Rank Test</h6>
+                    <ul>
+                      <li>If the rank of <b>𝐴</b> equals the number of vectors, the vectors are independent.</li>
+                      <li>If the rank is less than the number of vectors, they are dependent.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h6>Determinant Method (for square matrices only)</h6>
+                    <ul>
+                      <li>If det⁡(𝐴)≠0 → Independent</li>
+                      <li>If det(A)=0 → Dependent</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
