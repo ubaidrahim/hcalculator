@@ -42,8 +42,8 @@
   <!-- Navbar Light -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{url('/')}}" data-placement="bottom">
-        <img src="{{ asset('assets/img/logo.png') }}" width="300" height="48" class="d-inline-block align-top" alt="">
+      <a class="navbar-brand w-50 w-md-auto py-0" href="{{url('/')}}" data-placement="bottom">
+        <img src="{{ asset('assets/img/logo.png') }}" width="300" class="d-inline-block align-top w-100" alt="">
         {{-- <strong>H</strong> Calculator --}}
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
