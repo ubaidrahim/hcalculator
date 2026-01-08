@@ -49,3 +49,6 @@ Route::post('/test-one', [App\Http\Controllers\HasnainController::class, 'calcul
 
 Route::get('/even-or-odd-fun', [App\Http\Controllers\HasnainController::class, 'evenoddfun']);
 Route::post('/even-or-odd-fun', [\App\Http\Controllers\HasnainController::class, 'calculate_evenodd']);
+
+Route::get('/hydraulic-hp-calculator', [App\Http\Controllers\HasnainController::class, 'hydraulichp']);
+Route::post('/hydraulic-hp-calculator', [\App\Http\Controllers\HasnainController::class, 'calculate_hp']);

@@ -130,14 +130,19 @@ class HasnainController extends Controller
         return $val;
         
     }
-}
-   /*  public function calculate_evenodd(Request $request){
+    //For hydraulichpcalculator
+    public function hydraulichp(){
+      return view('hydraulichpcalculator');
+    }
+    public function calculate_hp(Request $request){
       $validateData = $request->validate([
-        'expression' => ['required'],
+        'i1' => ['required'],
         'i2' => ['required']
       ]);
       $num1 = $request->input('i1');
       $num2 = $request->input('i2');
-      $result = $num1 * $num2;
+      $result = $num1 * $num2 / 1714;
       return response()->json(['response' => 'Result: '.$result]);
-    } */
+    }
+}
+   
