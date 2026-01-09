@@ -54,7 +54,7 @@
         </span>
       </button>
       <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 mt-3 ps-lg-5 col-5 col-md-9" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover ms-auto align-items-center">
+        <ul class="navbar-nav navbar-nav-hover ms-auto align-items-center justify-content-end flex-wrap">
             <li class="nav-item mx-2"><a class="ps-2 text-nowrap" href="{{ url('/') }}">Home</a></li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a class="ps-2 d-flex justify-content-center cursor-pointer align-items-center text-nowrap" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
