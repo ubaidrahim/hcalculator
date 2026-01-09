@@ -23,7 +23,7 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="{{asset('assets/css/style.css')}}" rel="stylesheet" />
+  <link id="pagestyle" href="{{asset('assets/css/style.css?v=1')}}" rel="stylesheet" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q647LVHYB"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4247094152424431"
@@ -41,20 +41,20 @@
 <body class="forms-sections">
   <!-- Navbar Light -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container-fluid flex-column">
-      <a class="navbar-brand m-0" href="{{url('/')}}" data-placement="bottom">
-        <img src="{{ asset('assets/img/newlogo1.png') }}" width="380" class="d-inline-block align-top" alt="">
+    <div class="container-fluid">
+      <a class="navbar-brand m-0 col-5 col-md-3" href="{{url('/')}}" data-placement="bottom">
+        <img src="{{ asset('assets/img/newlogo1.png') }}" width="380" class="d-inline-block align-top img-fluid" alt="">
         {{-- <strong>H</strong> Calculator --}}
       </a>
-      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler shadow-none ms-auto col-5 col-md-9 text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
           <span class="navbar-toggler-bar bar2"></span>
           <span class="navbar-toggler-bar bar3"></span>
         </span>
       </button>
-      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 mt-3 ps-lg-5" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover mx-auto align-items-center">
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 mt-3 ps-lg-5 col-5 col-md-9" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto align-items-center">
             <li class="nav-item mx-2"><a class="ps-2 text-nowrap" href="{{ url('/') }}">Home</a></li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a class="ps-2 d-flex justify-content-center cursor-pointer align-items-center text-nowrap" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
