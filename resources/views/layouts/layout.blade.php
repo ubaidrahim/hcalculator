@@ -23,7 +23,7 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="{{asset('assets/css/style.css?v=1')}}" rel="stylesheet" />
+  <link id="pagestyle" href="{{asset('assets/css/style.css?v=1.1')}}" rel="stylesheet" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q647LVHYB"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4247094152424431"
