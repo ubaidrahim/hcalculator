@@ -64,3 +64,6 @@ Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\Matrix
 // arslan
 Route::get('/even-odd-function', [App\Http\Controllers\EvenOddCalculatorController::class, 'index']);
 Route::post('/even-odd-function', [\App\Http\Controllers\EvenOddCalculatorController::class, 'calculate']);
+
+Route::get('/hydraulic-hp-calculator', [App\Http\Controllers\HasnainController::class, 'hydraulichp']);
+Route::post('/hydraulic-hp-calculator', [\App\Http\Controllers\HasnainController::class, 'calculate_hp']);
