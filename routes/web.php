@@ -62,8 +62,8 @@ Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixP
 Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);
 
 // arslan
-Route::get('/even-odd-function', [App\Http\Controllers\EvenOddCalculatorController::class, 'index']);
-Route::post('/even-odd-function', [\App\Http\Controllers\EvenOddCalculatorController::class, 'calculate']);
+Route::get('/even-odd-function', [App\Http\Controllers\Calculators\EvenOddCalculatorController::class, 'index']);
+Route::post('/even-odd-function', [\App\Http\Controllers\Calculators\EvenOddCalculatorController::class, 'calculate']);
 
-Route::get('/hydraulic-hp-calculator', [App\Http\Controllers\HasnainController::class, 'hydraulichp']);
-Route::post('/hydraulic-hp-calculator', [\App\Http\Controllers\HasnainController::class, 'calculate_hp']);
+Route::get('/hydraulic-hp-calculator', [App\Http\Controllers\Calculators\HydraulicHpController::class, 'index']);
+Route::post('/hydraulic-hp-calculator', [\App\Http\Controllers\Calculators\HydraulicHpController::class, 'calculate_hp']);
