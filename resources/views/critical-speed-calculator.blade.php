@@ -52,29 +52,25 @@
               <div class="mb-3">
                 <label class="form-label">End Fixity:</label>
         <select name="condition" class="form-select" required style="padding: 0.5rem 1rem 0.5rem 0.5rem">
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="C">C</option>
-  <option value="D">D</option>
-</select>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
 
 
               </div>
 
               {{-- Buttons --}}
          <div class="d-flex w-100">
-  <button type="submit" class="btn btn-primary flex-fill me-1">Calculate</button>
-  <button type="button" id="resetBtn" class="btn btn-secondary flex-fill ms-1">Reset</button>
-</div>
-
-
+          <button type="submit" class="btn btn-primary flex-fill me-1">Calculate</button>
+          <button type="button" id="resetBtn" class="btn btn-secondary flex-fill ms-1">Reset</button>
+         </div>
             </form>
-
             {{-- Result Box --}}
             <div id="resultBox" class="alert text-center mt-4 d-none" style="background:#eefbf3; border-color:#21c285;">
               <strong>Critical Speed (Nc):</strong> <span id="rpmResult"></span>
             </div>
-
           </div>
         </div>
       </div>
@@ -101,8 +97,6 @@
          class="img-fluid" 
          style="max-width: 400px;">
 </p>
-
-
   <p><strong>Where:</strong></p>
   <ul>
     <li><strong>d</strong> = Shaft root diameter (m)</li>
@@ -179,12 +173,11 @@ document.addEventListener("DOMContentLoaded", function() {
     lenUnit.textContent = selected;
   });
 
-  // AJAX form submit
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
 
-    fetch("{{ url('/critical-calculator') }}", {
+    fetch("{{ url('/critical-speed-calculator') }}", {
       method: "POST",
       headers: {
         "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value,

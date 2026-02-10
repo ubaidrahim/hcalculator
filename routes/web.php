@@ -51,11 +51,15 @@ Route::post('/weighted-average-calculator', [App\Http\Controllers\Calculators\We
 Route::get('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'index']);
 Route::post('/critical-speed-calculator', [App\Http\Controllers\Calculators\CriticalController::class, 'calculate']);
 
+
 Route::get('/grade-curve-calculator', [GradeCurveController::class, 'index'])
     ->name('grade-curve-calculator');
 
 Route::post('/grade-curve-calculator', [GradeCurveController::class, 'calculate'])
     ->name('grade-curve-calculator');
+
+Route::get('/cc-to-hp-calculator', [App\Http\Controllers\Calculators\CcHpController::class, 'index']);
+Route::post('/cc-to-hp-calculator', [App\Http\Controllers\Calculators\CcHpController::class, 'calculate']);
 
 // /ubaid/
 Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
