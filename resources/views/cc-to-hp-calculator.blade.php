@@ -30,7 +30,7 @@
                     {{-- Unit Selection --}}
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Convert From:</label>
-                        <select id="unitSource" class="form-select p-2" required>
+                        <select id="unitSource" class="form-select p-2 rounded-0" required>
                             <option value="hp_to_cc">Horsepower (HP) to CC</option>
                             <option value="cc_to_hp">Cubic Centimeters (CC) to HP</option>
                         </select>
@@ -62,17 +62,117 @@
         </div>
     </div>
 </div>
-<section class="container mt-5">
-    <h2>Understanding HP to CC Conversion</h2>
-    <p>Engine displacement (cc) aur horsepower (HP) ka koi fix formula nahi hota kyunke ye engine ki design, RPM, aur fuel type par depend karta hai. Neeche diye gaye factors aam taur par industry mein estimation ke liye use hotay hain:</p>
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Common Conversion Factors</h3>
-            <ul>
-                <li><strong>Performance Engines:</strong> 15–17 cc per HP</li>
-                <li><strong>Standard 4-Stroke:</strong> 22–25 cc per HP</li>
-                <li><strong>Utility Engines:</strong> 32–35 cc per HP</li>
-            </ul>
+<section class="container mt-md-5 mt-3">
+    <h2 class="fw-bold mb-3">Ultimate CC to HP Calculator: Engine Displacement Explained</h2>
+    <p>
+        Whether you are looking at a lawnmower, a motorcycle, or a car, understanding how engine size (CC) relates to power output (HP) is crucial. While there is no perfect "one-size-fits-all" conversion, our guide provides the most accurate estimation models used by automotive experts.
+    </p>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>The Reality of CC vs. Horsepower</h3>
+            <p><strong>Cubic Centimeters (CC)</strong> measure the volume or size of the engine (displacement). <strong>Horsepower (HP)</strong> measures the work or power the engine produces.</p>
+            <p>The reason a 1000cc motorcycle can have 200 HP while a 1000cc economy car might only have 70 HP is due to efficiency, RPM, and tuning.</p>
+            
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h3>1. The Estimation Formulas</h3>
+        <p>Most basic calculators use a "rule of thumb" (CC/15). For better accuracy, use the formula that matches your engine type:</p>
+        
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="p-3 border rounded" style="background:#eefbf3;";>
+                    <h5 class="fw-bold">Small Utility Engines</h5>
+                    <p class="small text-muted">Lawnmowers, Snowblowers</p>
+                    <p class="mb-0"><strong>Formula:</strong> HP = CC / 30 to 32</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border rounded" style="background:#eefbf3;";>
+                    <h5 class="fw-bold">Standard Vehicles</h5>
+                    <p class="small text-muted">Passenger Cars & Commuter Bikes</p>
+                    <p class="mb-0"><strong>Formula:</strong> HP = CC / 15 to 17</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border rounded" style="background:#eefbf3;";>
+                    <h5 class="fw-bold">High-Performance</h5>
+                    <p class="small text-muted">Sportbikes & Racing Engines</p>
+                    <p class="mb-0"><strong>Formula:</strong> HP = CC / 5 to 7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h3>2. Advanced Comparison Table</h3>
+        <div class="table-responsive">
+            <table class="table mt-2 px-0" style="background:#eefbf3";>
+                <thead class="table-success px-0">
+                    <tr>
+                        <th class="px-2">Engine Type</th>
+                        <th class="px-2">Displacement (CC)</th>
+                        <th class="px-2">Estimated HP Range</th>
+                        <th class="px-2">Common Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Small Utility</td>
+                        <td>50cc - 200cc</td>
+                        <td>2 - 6 HP</td>
+                        <td>Lawnmowers, Weed Whackers</td>
+                    </tr>
+                    <tr>
+                        <td>Scooters/Small Bikes</td>
+                        <td>125cc - 250cc</td>
+                        <td>8 - 25 HP</td>
+                        <td>Honda Grom, Yamaha Zuma</td>
+                    </tr>
+                    <tr>
+                        <td>Compact Cars</td>
+                        <td>1000cc - 1600cc</td>
+                        <td>70 - 130 HP</td>
+                        <td>Ford Fiesta, Honda Fit</td>
+                    </tr>
+                    <tr>
+                        <td>Sport Motorcycles</td>
+                        <td>600cc - 1000cc</td>
+                        <td>100 - 200 HP</td>
+                        <td>Kawasaki Ninja, Yamaha R1</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Cars</td>
+                        <td>2000cc (Turbo)</td>
+                        <td>250 - 350 HP</td>
+                        <td>VW Golf R, Subaru STI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mt-md-5 mt-3">
+        <h3>3. Factors That "Break" the Formula</h3>
+        <p>If your vehicle doesn't fit these numbers, it’s likely due to one of these factors:</p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Forced Induction (Turbo/Superchargers):</strong> A turbocharger forces more air into the cylinders, allowing a small engine to produce massive power.</li>
+            <li class="list-group-item"><strong>RPM (Revolutions Per Minute):</strong> Engines that spin faster (like F1 or Sportbikes) produce more HP despite low CC.</li>
+            <li class="list-group-item"><strong>2-Stroke vs. 4-Stroke:</strong> 2-stroke engines fire twice as often, usually offering more power per CC.</li>
+        </ul>
+    </div>
+
+    <div class="my-md-5 my-3 p-4 border rounded bg-white shadow-sm">
+        <h3 class="mb-3">Frequently Asked Questions (FAQ)</h3>
+        <div class="mb-3">
+            <p class="fw-bold mb-1">Can I increase my HP without increasing my CC?</p>
+            <p class="text-muted">Yes. Through "tuning," you can improve air intake, upgrade exhaust systems, or remap the engine's ECU.</p>
+        </div>
+        <div class="mb-3">
+            <p class="fw-bold mb-1">Why does my 2000cc Diesel have less HP than a 2000cc Gasoline engine?</p>
+            <p class="text-muted">Diesels are designed for Torque (pulling power) and lower RPMs, resulting in lower HP but higher towing capacity.</p>
         </div>
     </div>
 </section>
