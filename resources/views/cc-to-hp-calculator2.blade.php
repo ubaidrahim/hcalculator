@@ -19,18 +19,18 @@
         </div>
         <div class="card shadow-lg p-md-4 p-2">
             <h1 class="text-center mb-4">Engine Displacement & Power Converter</h1>
-            <form id="hpCcForm">
+            <form id="hpCcForm" action="{{url('/cc-to-hp-calculator')}}" method="POST">
                 @csrf
                 <div class="row">
                     {{-- Input Value --}}
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Enter Value:</label>
-                        <input type="number" step="any" id="inputValue" class="form-control rounded-0 border-bottom" placeholder="e.g. 22" required>
+                        <input type="number" step="any" id="inputValue" name="inputValue" class="form-control rounded-0 border-bottom" placeholder="e.g. 22" required>
                     </div>
                     {{-- Unit Selection --}}
                     <div class="col-md-6 mb-3">
                         <label class="form-label">Convert From:</label>
-                        <select id="unitSource" class="form-select p-2 rounded-0" required>
+                        <select id="unitSource" class="form-select p-2 rounded-0" name="unit" required>
                             <option value="hp_to_cc">Horsepower (HP) to CC</option>
                             <option value="cc_to_hp">Cubic Centimeters (CC) to HP</option>
                         </select>
@@ -200,48 +200,48 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         const val = parseFloat(document.getElementById('inputValue').value);
         const mode = document.getElementById('unitSource').value;
-        
-        tableBody.innerHTML = ""; 
-        if(mobileView) mobileView.innerHTML = ""; 
+        var data = $('#hpCcForm').serialize();
+        var method = $(this).attr('method');
+    var url = $(this).attr('action');
+        $.ajax({
+            url : url,
+            method: 'POST',
+            data : data,
+            success: function(data){
+                console.log(data);
+                displayResult(data.results);
+                
+            },
+            error: (error) => {console.log(error)}
+        });
+    });
 
-        engines.forEach(eng => {
-            let res, rMin, rMax, unitLabel;
-            
-            if (mode === 'hp_to_cc') {
-                res = (val * eng.factor).toFixed(0);
-                rMin = (val * eng.range[0]).toFixed(0);
-                rMax = (val * eng.range[1]).toFixed(0);
-                unitLabel = "cc";
-            } else {
-                res = (val / eng.factor).toFixed(2);
-                rMin = (val / eng.range[1]).toFixed(2);
-                rMax = (val / eng.range[0]).toFixed(2);
-                unitLabel = "HP";
-            }
-
-            const row = `
+    function displayResult(result)
+    {
+        var tBody = '';
+        var cardBody = '';
+        result.forEach(eng =>{
+            tBody = tBody + `
                 <tr>
-                    <td><strong>${eng.name}</strong><br><small class="text-muted">${eng.desc}</small></td>
-                    <td><span class="badge bg-primary fs-6">${res} ${unitLabel}</span></td>
-                    <td>${rMin} - ${rMax} ${unitLabel}</td>
+                    <td><strong>${eng.engine_type}</strong><br><small class="text-muted">${eng.description}</small></td>
+                    <td><span class="badge bg-primary fs-6">${eng.value} ${eng.unit}</span></td>
+                    <td>${eng.range} ${eng.unit}</td>
                     <td>${eng.factor} cc/HP</td>
                 </tr>`;
-            tableBody.innerHTML += row;
-
-            const card = `
+            cardBody = cardBody + `
                 <div class="card mb-3" style="background:#eefbf3; border-left: 3px solid #21c285">
                     <div class="card-body p-2">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <div style="max-width: 65%;">
-                                <h6 class="fw-bold mb-0" style="color: #2c3e50;">${eng.name}</h6>
-                                <small class="text-muted">${eng.desc}</small>
+                                <h6 class="fw-bold mb-0" style="color: #2c3e50;">${eng.engine_type}</h6>
+                                <small class="text-muted">${eng.description}</small>
                             </div>
-                            <span class="badge bg-primary px-2 py-2 fs-6">${res} ${unitLabel}</span>
+                            <span class="badge bg-primary px-2 py-2 fs-6">${eng.value} ${eng.unit}</span>
                         </div>
                         <div class="row pt-2 border-top" style="border-color: rgba(0,0,0,0.05) !important;">
                             <div class="col-6">
                                 <small class="text-muted d-block">Range</small>
-                                <span class="fw-bold small">${rMin} - ${rMax} ${unitLabel}</span>
+                                <span class="fw-bold small">${eng.range} ${eng.unit}</span>
                             </div>
                             <div class="col-6 text-end">
                                 <small class="text-muted d-block">Factor</small>
@@ -250,15 +250,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                     </div>
                 </div>`;
-            
-            if(mobileView) mobileView.innerHTML += card;
         });
-
+        $('#resultTableBody').html(tBody);
+        $('#mobileResultView').html(cardBody);
         resultArea.classList.remove('d-none');
         
         resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
+    }
     resetBtn.addEventListener('click', () => {
         form.reset();
         resultArea.classList.add('d-none');
