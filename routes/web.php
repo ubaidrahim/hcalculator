@@ -61,9 +61,6 @@ Route::post('/grade-curve-calculator', [GradeCurveController::class, 'calculate'
 Route::get('/cc-to-hp-calculator', [App\Http\Controllers\Calculators\CcHpController::class, 'index']);
 Route::post('/cc-to-hp-calculator', [App\Http\Controllers\Calculators\CcHpController::class, 'calculate']);
 
-Route::get('/cc-to-hp-calculator2', [App\Http\Controllers\Calculators\CcHpController2::class, 'index']);
-Route::post('/cc-to-hp-calculator2', [App\Http\Controllers\Calculators\CcHpController2::class, 'calculate']);
-
 // /ubaid/
 Route::get('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'index']);
 Route::post('/matrix-power-calculator', [App\Http\Controllers\Calculators\MatrixPowerController::class, 'calculate']);

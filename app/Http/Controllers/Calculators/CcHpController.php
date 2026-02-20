@@ -9,7 +9,7 @@ class CcHpController extends Controller
 {
     public function index()
     {
-        return view('cc-to-hp-calculator');
+        return view('cc-to-hp-calculator2');
     }
     public function calculate(Request $request)
     {
@@ -48,13 +48,10 @@ class CcHpController extends Controller
                 'unit'        => $displayUnit
             ];
         }
-        if ($request->ajax()) {
-            return response()->json([
-                'input'   => $input,
-                'mode'    => $unit,
-                'results' => $results
-            ]);
-        }
-        return view('cc-to-hp-calculator', compact('results', 'input', 'unit'));
+        return response()->json([
+            'input'   => $input,
+            'mode'    => $unit,
+            'results' => $results
+        ]);
     }
 }
