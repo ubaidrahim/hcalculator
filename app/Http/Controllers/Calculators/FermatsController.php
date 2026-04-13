@@ -16,8 +16,8 @@ class FermatsController extends Controller
   public function calculate_fermats(Request $request){
   //  echo 'check';
     $validateData = $request->validate([
-      'a' => ['required',new Prime],
-      'p' => ['required',new Integer]
+      'a' => ['required',new Integer],
+      'p' => ['required',new Prime]
     ]);
     $integer = round($request->input('a'));
     $prime = $request->input('p');
